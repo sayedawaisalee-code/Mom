@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mother's Day Special ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    overflow-x:hidden;
+    overflow-y:auto;
+    font-family:'Poppins',sans-serif;
+    background:#0f172a;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:25px;
+}
+
+/* Background */
+
+.bg{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background:
+    radial-gradient(circle at top left,#7c3aed,transparent 30%),
+    radial-gradient(circle at bottom right,#ec4899,transparent 30%),
+    linear-gradient(135deg,#020617,#0f172a,#111827);
+    z-index:-5;
+}
+
+/* Glow Circles */
+
+.circle{
+    position:fixed;
+    border-radius:50%;
+    filter:blur(90px);
+    opacity:0.4;
+    animation:move 10s infinite alternate;
+}
+
+.circle1{
+    width:300px;
+    height:300px;
+    background:#8b5cf6;
+    top:-100px;
+    left:-100px;
+}
+
+.circle2{
+    width:350px;
+    height:350px;
+    background:#791848;
+    bottom:-120px;
+    right:-100px;
+}
+
+@keyframes move{
+    from{
+        transform:translateY(0px);
+    }
+    to{
+        transform:translateY(40px);
+    }
+}
+
+/* Floating Hearts */
+
+.hearts span{
+    position:fixed;
+    bottom:-100px;
+    color:rgba(255,255,255,0.25);
+    font-size:22px;
+    animation:float 10s linear infinite;
+}
+
+.hearts span:nth-child(1){
+    left:10%;
+    animation-delay:0s;
+}
+
+.hearts span:nth-child(2){
+    left:30%;
+    animation-delay:2s;
+}
+
+.hearts span:nth-child(3){
+    left:50%;
+    animation-delay:4s;
+}
+
+.hearts span:nth-child(4){
+    left:70%;
+    animation-delay:6s;
+}
+
+.hearts span:nth-child(5){
+    left:90%;
+    animation-delay:8s;
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0) scale(0);
+        opacity:0;
+    }
+
+    50%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-120vh) scale(1.5);
+        opacity:0;
+    }
+
+}
+
+/* Card */
+
+.card{
+    width:90%;
+    max-width:760px;
+    padding:45px;
+    border-radius:35px;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.1);
+    backdrop-filter:blur(18px);
+    box-shadow:0 0 40px rgba(0,0,0,0.4);
+    text-align:center;
+    animation:fadeIn 1.5s ease;
+    position:relative;
+    overflow:hidden;
+}
+
+/* Shine */
+
+.card::before{
+    content:'';
+    position:absolute;
+    width:200%;
+    height:100%;
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.15),
+        transparent
+    );
+
+    top:0;
+    left:-200%;
+    animation:shine 6s infinite;
+}
+
+@keyframes shine{
+    100%{
+        left:200%;
+    }
+}
+
+/* Soft Heart */
+
+.soft-heart{
+    font-size:70px;
+    color:#ffb3c7;
+    margin-bottom:20px;
+    animation:softBeat 2s infinite ease-in-out;
+
+    text-shadow:
+    0 0 10px rgba(255,179,199,0.7),
+    0 0 25px rgba(255,179,199,0.5),
+    0 0 45px rgba(255,179,199,0.3);
+}
+
+@keyframes softBeat{
+
+    0%{
+        transform:scale(1);
+    }
+
+    25%{
+        transform:scale(1.08);
+    }
+
+    50%{
+        transform:scale(1);
+    }
+
+    75%{
+        transform:scale(1.12);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+
+/* Heading */
+
+h1{
+    font-family:'Great Vibes',cursive;
+    font-size:58px;
+    color:white;
+    margin-bottom:18px;
+}
+
+/* Subtitle */
+
+.subtitle{
+    color:#f9a8d4;
+    font-size:18px;
+    margin-bottom:25px;
+    letter-spacing:2px;
+}
+
+/* Text */
+
+p{
+    color:#e5e7eb;
+    font-size:19px;
+    line-height:1.9;
+    margin-bottom:35px;
+}
+
+/* Button */
+
+button{
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+    background:linear-gradient(135deg,#ec4899,#8b5cf6);
+    color:white;
+    transition:0.4s;
+    box-shadow:0 0 20px rgba(236,72,153,0.4);
+}
+
+button:hover{
+    transform:scale(1.07);
+}
+
+
+/* Fade */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    h1{
+        font-size:42px;
+    }
+
+    p{
+        font-size:16px;
+    }
+
+    .card{
+        padding:30px 20px;
+    }
+
+    .soft-heart{
+        font-size:55px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+    
+<div class="bg"></div>   
+
+<div class="circle circle1"></div>
+<div class="circle circle2"></div>
+
+<div class="hearts">
+    <span>❤️</span>
+    <span>💖</span>
+    <span>💕</span>
+    <span>💗</span>
+    <span>❤️</span>
+</div>
+
+<div class="card">
+
+    <div class="soft-heart">❤</div>
+
+    <h1>Happy Mother’s Day</h1>
+
+    <div class="subtitle">
+        FOR THE MOST BEAUTIFUL SOUL
+    </div>
+
+    <p>
+        Dear Mom,<br><br>
+
+        Your love is the purest blessing in my life.
+        Every smile of yours gives peace to my heart
+        and every prayer of yours gives strength to my future.<br><br>
+
+        Thank you for every sacrifice,
+        every hug,
+        every prayer,
+        and every moment you stood beside me. ❤️
+    </p>
+
+    <button onclick="showMessage()">
+        Open Special Message ✨
+    </button>
+
+</div>
+
+<script>
+
+function showPop2(){
+
+document.body.innerHTML = `
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#0f172a,#1e1b4b,#312e81);
+    font-family:'Poppins',sans-serif;
+}
+
+/* BOX */
+.box2{
+    width:90%;
+    max-width:760px;
+    padding:45px;
+    border-radius:30px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(18px);
+    text-align:center;
+    color:white;
+    position:relative;
+    animation:fade 1s ease;
+}
+
+/* HEART */
+.heart2{
+    font-size:70px;
+    animation:beat 1.5s infinite;
+    margin-bottom:20px;
+}
+
+/* TITLE */
+h1{
+    font-family:'Great Vibes',cursive;
+    font-size:55px;
+}
+
+/* TEXT */
+p{
+    font-size:18px;
+    line-height:1.8;
+    margin-top:20px;
+    color:#e5e7eb;
+}
+
+/* BUTTON */
+.btnBack{
+    position:absolute;
+    top:15px;
+    right:15px;
+    padding:10px 18px;
+    border-radius:30px;
+    border:none;
+    background:rgba(255,255,255,0.1);
+    color:white;
+    cursor:pointer;
+}
+
+/* ANIMATIONS */
+@keyframes beat{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.2);}
+    100%{transform:scale(1);}
+}
+
+@keyframes fade{
+    from{opacity:0; transform:translateY(30px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+</style>
+
+<div class="box2">
+
+    <button class="btnBack" onclick="location.reload()">Back</button>
+
+    <div class="heart2">💖</div>
+
+    <h1>One More Thing Mom ❤️</h1>
+
+    <p>
+        Mom...<br><br>
+        If I had to choose again, I would choose YOU every time as my mother.<br><br>
+        You are not just my mom, you are my whole world 🌍💖
+    </p>
+
+</div>
+
+`;
+
+}
+
+function showMessage(){
+
+document.body.innerHTML = `
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#020617,#111827,#312e81);
+    font-family:'Poppins',sans-serif;
+    padding:20px;
+}
+
+/* Message Box */
+
+.message-box{
+    width:90%;
+    max-width:760px;
+    padding:45px;
+    border-radius:35px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,0.1);
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+    animation:fade 1.5s ease;
+}
+
+/* Shine */
+
+.message-box::before{
+    content:'';
+    position:absolute;
+    width:200%;
+    height:100%;
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.15),
+        transparent
+    );
+
+    top:0;
+    left:-200%;
+    animation:shine 6s infinite;
+}
+
+/* Heart */
+
+.soft-heart{
+    font-size:75px;
+    color:#ffb3c7;
+    margin-bottom:20px;
+    animation:softBeat 2s infinite ease-in-out;
+
+    text-shadow:
+    0 0 10px rgba(255,179,199,0.7),
+    0 0 25px rgba(255,179,199,0.5),
+    0 0 45px rgba(255,179,199,0.3);
+}
+
+/* Heart Animation */
+
+@keyframes softBeat{
+
+    0%{
+        transform:scale(1);
+    }
+
+    25%{
+        transform:scale(1.08);
+    }
+
+    50%{
+        transform:scale(1);
+    }
+
+    75%{
+        transform:scale(1.12);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+
+/* Title */
+
+h1{
+    color:white;
+    font-size:55px;
+    margin-bottom:25px;
+    font-family:'Great Vibes',cursive;
+}
+
+/* Typing Text */
+
+.typing{
+    color:#e5e7eb;
+    font-size:20px;
+    line-height:1.9;
+    min-height:140px;
+    border-right:3px solid rgba(255,255,255,0.8);
+    display:inline-block;
+    padding-right:5px;
+    animation:blink .8s infinite;
+}
+
+/* Cursor Blink */
+
+@keyframes blink{
+
+    50%{
+        border-color:transparent;
+    }
+
+}
+
+/* Fade */
+
+@keyframes fade{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* Shine */
+
+@keyframes shine{
+    100%{
+        left:200%;
+    }
+}
+
+/* Button */
+
+.btn2{
+    margin-top:35px;
+    padding:14px 30px;
+    border:none;
+    border-radius:50px;
+    background:linear-gradient(135deg,#ec4899,#8b5cf6);
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+/* NEW CSS ADD KARO */
+
+.btn2{
+    position:absolute;
+    top:20px;
+    right:20px;
+
+    padding:10px 22px;
+    border:none;
+    border-radius:50px;
+
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(10px);
+
+    color:white;
+    font-size:14px;
+    font-weight:600;
+
+    cursor:pointer;
+    transition:0.4s;
+
+    border:1px solid rgba(255,255,255,0.15);
+}
+
+.btn2:hover{
+    transform:scale(1.08);
+    background:rgba(255,255,255,0.18);
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    h1{
+        font-size:40px;
+    }
+
+    .typing{
+        font-size:16px;
+        min-height:170px;
+
+    }
+
+    .message-box{
+        padding:30px 20px;
+    }
+
+}
+
+</style>
+
+<div class="message-box">
+
+    <div class="soft-heart">❤</div>
+
+    <h1>For My Mother</h1>
+
+    <p class="typing" id="typingText"></p>
+
+    <button class="btn2" onclick="location.reload()">
+        Back To Main Page ✨
+    </button>
+
+</div>
+
+`;
+
+const text = "Mom... You are my first teacher, my biggest blessing, and the most beautiful part of my life. May Allah always keep your smile shining forever. ❤️";
+
+let i = 0;
+
+function typeWriter(){
+
+    if(i < text.length){
+
+        document.getElementById("typingText").innerHTML += text.charAt(i);
+
+        i++;
+
+        setTimeout(typeWriter,50);
+    }
+
+}
+
+typeWriter();
+
+}
+
+</script>
+
+</body>
+</html>
